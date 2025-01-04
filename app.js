@@ -8,7 +8,9 @@ const connectDB = require('./config/db');
 dotenv.config();
 const app = express();
 connectDB();
-app.use(cors());
+app.use(cors({
+    origin: 'https://restaurant-booking-system-anjali.netlify.app/', 
+  }));
 app.use(bodyParser.json());
 app.use('/api/bookings', bookingRoutes);
 
