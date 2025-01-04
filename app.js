@@ -22,6 +22,6 @@ app.use(cors({
 }));
 
 app.use(bodyParser.json());
-app.use('/api/bookings', bookingRoutes);
+app.use('/bookings', bookingRoutes);
 
 module.exports = app;
